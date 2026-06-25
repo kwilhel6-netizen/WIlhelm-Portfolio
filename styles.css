@@ -1,0 +1,11 @@
+ /* CSS Styles by Wilhelm K. D. */
+/*Color Pallette: #F5F5DC, #230606, #FFD700, #98ac4f, #4682B4*/
+
+/* GLOBAL (base) MOBILE FIRST*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #98ac4f; /* Changed to the SeaGreen from your palette */
+    color: #230606; /* Default text color */
+}
