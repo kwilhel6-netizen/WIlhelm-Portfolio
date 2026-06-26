@@ -2,10 +2,146 @@
 /*Color Pallette: #F5F5DC, #230606, #FFD700, #98ac4f, #4682B4*/
 
 /* GLOBAL (base) MOBILE FIRST*/
-body {
-    font-family: Arial, sans-serif;
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #98ac4f; /* Changed to the SeaGreen from your palette */
-    color: #230606; /* Default text color */
 }
+
+ body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    color: #2D3748;  
+    background-color: #F7FAFC;
+    padding: 1rem;
+    
+     display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+/* Clear, scannable typographic scale */
+h1 { color: #1A365D; font-size: 2rem; margin-bottom: 0.5rem; }
+h2 { color: #2B6CB0; font-size: 1.5rem; margin-top: 1rem; margin-bottom: 0.75rem; border-bottom: 2px solid #E2E8F0; padding-bottom: 0.25rem; }
+h3 { color: #4A5568; font-size: 1.2rem; margin-top: 1rem; margin-bottom: 0.5rem; }
+p { margin-bottom: 1rem; }
+ul { margin-left: 1.5rem; margin-bottom: 1rem; }
+li { margin-bottom: 0.5rem; }
+header {
+    background: #FFFFFF;
+    padding: 2rem 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+header p {
+    color: #718096;
+    font-style: italic;
+    margin-bottom: 0;
+}
+
+/* Flexbox Navigation System */
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column; /* Vertical stacked layout for smaller screen sizes */
+    gap: 0.5rem;
+    background: #1A365D;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+    padding: 0.75rem;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+nav a:hover, nav a:focus {
+    background: #2B6CB0;
+    outline: none;
+}
+
+main {
+    background: #FFFFFF;
+    padding: 1.75rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Portfolio-Specific Mobile Card Grid Layout */
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-top: 1rem;
+}
+.project-card {
+    background: #F8FAFC;
+    padding: 1.5rem;
+    border-left: 5px solid #2B6CB0;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+/* Interactive Call to Action Styling for Links */
+.resume-cta {
+    display: inline-block;
+    background: #2B6CB0;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-top: 0.5rem;
+    transition: background 0.2s ease;
+}
+
+.resume-cta:hover {
+    background: #1A365D;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.875rem;
+    color: #718096;
+    padding: 1.5rem 1rem;
+    border-top: 1px solid #E2E8F0;
+}
+
+footer a {
+    color: #2B6CB0;
+    text-decoration: underline;
+    font-weight: 600;
+}
+@media (min-width: 768px) {
+    body {
+        max-width: 1100px;
+        margin: 3rem auto;
+        padding: 0;
+        gap: 2rem;
+    }
+
+    /* Transform navigation to layout horizontally across wider monitors */
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1.5rem;
+        padding: 0.75rem;
+    }
+
+    nav a {
+        padding: 0.5rem 1.5rem;
+        background: transparent;
+    }
+
+    /* Transform the project grid to a clean 3-Column Grid setup */
+    .project-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }}
